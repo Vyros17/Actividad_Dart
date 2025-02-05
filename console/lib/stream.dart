@@ -80,7 +80,7 @@ Stream<dynamic> weatherStream() async* {
     "Barcelona",
     "Oslo",
     "Antartida",
-    "Chiclayork"
+    "Perusalen"
   ];
   while (true) {
     await Future.delayed(Duration(seconds: rn.nextInt(10)));
