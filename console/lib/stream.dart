@@ -35,7 +35,7 @@ Map<String, dynamic> mapMaker() {
     }
   });
   map.addAll({
-    "Chiclayork": {
+    "Perusalen": {
       "lugar": "Chiclayork",
       "Temperatura": 90,
       "clima": "normal",
