@@ -4,12 +4,12 @@ void events(dynamic city) {
   if (city["eventos"] == null || (city["eventos"]["dias"] == 0)) {
     city["eventos"]?["evento"] = "";
     if (rn.nextInt(11) == 7) {
-      if (city["clima"] == "".endsWith("frio")) {
+      if (city["clima"].endsWith("frio")) {
         city["eventos"] = {
           "dias": rn.nextInt(31),
           "evento": "Tormenta de nieve"
         };
-      } else if (city["clima"] == "".endsWith("caluroso")) {
+      } else if (city["clima"].endsWith("Caluroso")) {
         city["eventos"] = {"dias": rn.nextInt(31), "evento": "Ola de Calor"};
       } else {
         city["eventos"] = {
