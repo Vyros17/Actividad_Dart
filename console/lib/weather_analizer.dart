@@ -25,14 +25,18 @@ void events(dynamic city) {
 
 void weatherAnalizer(dynamic city) {
   Random rn = Random();
-  int currentWeather = rn.nextInt(51);
-  if (currentWeather > city["Temperatura"]) {
+  int nextWeather = rn.nextInt(61);
+  city["Temperatura"] = nextWeather;
+  if (city["Temperatura"]>=40) {
+    city["clima"] = "Muy Caluroso";
+  } else if (city["Temperatura"]>=30 && city["Temperatura"]<40) {
     city["clima"] = "Caluroso";
-  } else if (currentWeather == city["Temperatura"]) {
+  } else if (city["Temperatura"]>=20 && city["Temperatura"]<30){
     city["clima"] = "normal";
-  } else {
-    city["clima"] = " frio";
+  } else if (city["Temperatura"]>=10 && city["Temperatura"]<20){
+    city["clima"] = "frio";
+  } else if (city["Temperatura"]<10){
+    city["clima"] = "muy frio";
   }
   events(city);
-  city["Temperatura"] = currentWeather;
 }
